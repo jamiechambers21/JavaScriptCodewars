@@ -1,0 +1,15 @@
+function ipsBetween(start, end) {
+  const s = start.split('.');
+  const e = end.split('.');
+
+  const newArr = [e[0] - s[0], e[1] - s[1], e[2] - s[2], e[3] - s[3]];
+
+  console.log([s, e, newArr]);
+
+  return (
+    newArr[0] * 256 ** 3 +
+    newArr[1] * 256 ** 2 +
+    newArr[2] * 256 ** 1 +
+    newArr[3]
+  );
+}
